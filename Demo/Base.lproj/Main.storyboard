@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TR6-H2-3LR">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UWO-xH-ARv">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reuse" id="Mv9-7q-Inc">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wj4-ST-haZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NIe-6O-3h1"/>
+                                    <constraint firstAttribute="width" constant="85" id="hvR-DD-brN"/>
+                                </constraints>
+                                <state key="normal" title="Add Red"/>
+                                <connections>
+                                    <action selector="onRedButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y5s-RF-Vnc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4l-sr-Mrg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="Aft-VP-Nyh"/>
+                                    <constraint firstAttribute="height" constant="30" id="JXm-NY-RcT"/>
+                                </constraints>
+                                <state key="normal" title="Add Blue"/>
+                                <connections>
+                                    <action selector="onBlueButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jz-Y9-JvD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVN-zi-1c1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="UFL-a1-Cir"/>
+                                    <constraint firstAttribute="height" constant="30" id="xDx-17-Yoq"/>
+                                </constraints>
+                                <state key="normal" title="Add Green"/>
+                                <connections>
+                                    <action selector="onGreenButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qff-P5-FOY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BVN-zi-1c1" firstAttribute="top" secondItem="TR6-H2-3LR" secondAttribute="bottom" constant="8" id="5df-qP-d4B"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TR6-H2-3LR" secondAttribute="bottom" constant="50" id="BGt-rJ-PLd"/>
+                            <constraint firstItem="wj4-ST-haZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DUz-ls-9a4"/>
+                            <constraint firstItem="TR6-H2-3LR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DlS-uf-hhy"/>
+                            <constraint firstItem="wj4-ST-haZ" firstAttribute="top" secondItem="TR6-H2-3LR" secondAttribute="bottom" constant="8" id="b8F-vB-edG"/>
+                            <constraint firstItem="BVN-zi-1c1" firstAttribute="leading" secondItem="wj4-ST-haZ" secondAttribute="trailing" constant="50" id="cH5-tJ-9oh"/>
+                            <constraint firstItem="l4l-sr-Mrg" firstAttribute="leading" secondItem="BVN-zi-1c1" secondAttribute="trailing" constant="56" id="dk7-e5-Zey"/>
+                            <constraint firstItem="TR6-H2-3LR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e4r-uo-BWr"/>
+                            <constraint firstItem="l4l-sr-Mrg" firstAttribute="top" secondItem="TR6-H2-3LR" secondAttribute="bottom" constant="8" id="l6U-Vg-Jbd"/>
+                            <constraint firstAttribute="trailing" secondItem="TR6-H2-3LR" secondAttribute="trailing" id="z7V-lA-Vxt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colView" destination="TR6-H2-3LR" id="ako-1I-L73"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="377"/>
+        </scene>
+    </scenes>
+</document>
